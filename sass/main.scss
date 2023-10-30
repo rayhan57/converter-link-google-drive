@@ -1,0 +1,31 @@
+$primary: #fcf5ed;
+$secondary: #f4bf96;
+$tertiary: #ce5a67;
+$quaternary: #1f1717;
+
+$theme-colors: ();
+
+$custom-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "tertiary": $tertiary,
+  "quaternary": $quaternary,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "bootstrap/scss/bootstrap";
+
+body {
+  min-height: 100vh;
+  background: linear-gradient($primary, #fcf5edd7);
+  background-repeat: no-repeat;
+}
+
+.form-control:focus {
+  border: 1px solid $quaternary;
+}
+
+.form-control {
+  background-color: white;
+}
